@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            font: normal 10pt Arial;
+        }
+    </style>
+    <title>Ex01</title>
+</head>
+<body>
+    <script>
+        document.write(typeof 6) //'number'
+        document.write(`<br />`)
+        document.write(typeof NaN) //'number'
+        document.write(`<br />`)
+        document.write(typeof Infinity) //'number'
+        document.write(`<br />`)
+        document.write(typeof {}) //'object'
+        document.write(`<br />`)
+        document.write(typeof []) //'object'
+        document.write(`<br />`)
+        document.write(typeof null) //'object'
+        document.write(`<br />`)
+        document.write(typeof undefined) //'undefined'
+        document.write(`<br />`)
+        document.write(typeof function(){}) //'function'
+        document.write(`<br />`)
+
+        let name = prompt('what\'s your name?')
+        document.write(`<br />Your name is <strong>${name}</strong>, right? <br />`)
+
+        let number = 1.1
+        Number.parseInt(number)
+        Number.parseFloat(number)
+        Number(number)
+
+        number.toString()
+        String(number)
+
+        number.toFixed(2) //1.10
+
+        let brCurrency = number.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+        document.write('<br />', brCurrency)
+        document.write(`<br />`)
+        document.write(brCurrency.length)
+
+        document.write(`<br /> 5**2=`, 5**2) //5 elevado ao quadrado
+        document.write(`<br /> 4 + 2 / 2=`, 4 + 2 / 2) //Ordem de precedencia (), **, */%, +-
+        document.write(`<br /> 8 % 5=`, 8 % 5) //=3
+        document.write(`<br /> number **= 2 = `, number **= 2)
+        document.write(`<br /> 5 == '5' is `, 5 == '5')
+        document.write(`<br /> 5 === '5' is `, 5 === '5')
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area {
+            width: 50px;
+            height: 50px;
+            background-color: bisque;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Clique
+    </div>
+    <br />
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">https://developer.mozilla.org/pt-BR/docs/Web/Events</a>
+    <br />
+    <div id="area">
+        Clique
+    </div>
+
+    <script>
+        let area = window.document.getElementById('area')
+
+        function clicar(){
+            let valor = area.innerText
+            if(Number(valor)){
+                area.innerText = Number(valor) + 1
+            } else {
+                area.innerText = 1;
+            }
+        }
+
+        function entrar() {
+            area.style.backgroundColor = 'cadetblue'
+        }
+
+        function sair() {
+            area.style.backgroundColor = 'bisque'
+        }
+
+        let area2 = window.document.querySelectorAll('#area')[1]
+
+        area2.addEventListener('click', () => {area2.innerText = 'Clicou'})
+        area2.addEventListener('mouseenter', () => {area2.innerText = 'Entrou'})
+        area2.addEventListener('mouseout', () => {area2.innerText = 'Saiu'})
+        
+    </script>
+</body>
+</html>

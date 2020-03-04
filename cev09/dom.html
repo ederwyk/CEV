@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <p id='pid' name='pname' class='pclass'>Arvore DOM</p>
+    <p>window.document window.history window.location</p>
+    <p>window.document.&lt;html&gt;</p>
+    <div>div de exemplo</div>
+    
+    <script>
+       window.document.write(`<br \>`, window.document.URL)
+       window.document.write(`<br \>`, window.document.getElementById('pid'))
+       window.document.write(`<br \>`, window.document.getElementsByName('pname'))
+       window.document.write(`<br \>`, window.document.getElementsByClassName('pclass'))
+       window.document.write(`<br \>`, window.document.getElementsByTagName('p'))
+       window.document.write(`<br \>`, window.document.getElementsByTagName('p')[0])
+       window.document.write(`<br \>`, window.document.getElementsByTagName('p')[0].innerHTML)
+       window.document.write(`<br \>`, window.document.getElementsByTagName('p')[0].innerText)
+
+       window.document.write(`<br \>`, window.document.querySelector('#pid'))
+       window.document.write(`<br \>`, window.document.querySelector('.pclass'))
+       window.document.write(`<br \>`, window.document.querySelector('p')) //Return only first element
+       window.document.write(`<br \>`, window.document.querySelector('p#pid'))
+       window.document.write(`<br \>`, window.document.querySelector('p.pclass'))
+
+       window.document.write(`<br \>`, window.document.querySelectorAll('p'))
+       
+       let elementP = window.document.createElement('p')
+       elementP.id = 'myElementP'
+       elementP.innerHTML = "createElement('p')"
+       window.document.getElementById('pid').appendChild(elementP)
+
+       window.document.write(`<br \>`, window.document.getElementById('pid').parentNode)
+       window.document.write(`<br \>`, window.document.getElementById('pid').parentNode.parentNode)
+       window.document.write(`<br \>`, window.document.getElementById('pid').parentNode.parentNode.parentNode)
+       window.document.write(`<br \>`, window.document.getElementById('pid').childNodes[1])
+
+       window.document.getElementById('pid').removeChild(elementP)
+
+    </script>
+</body>
+</html>
