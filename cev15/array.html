@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lista = []
+        lista.push(5)
+        lista[4] = 3 //[5, empty, empty, empty, 3]
+        lista.push(4) //[5, empty, empty, empty, 3, 4]
+        lista.sort() //[3, 4, 5, empty, empty, empty]
+        lista.length //6
+        lista.indexOf(1) //-1
+        lista.indexOf(5) //2
+
+        for (let item in lista) {
+            console.log(item)
+        }
+    </script>
+</body>
+</html>
